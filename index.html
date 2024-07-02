@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bookStyles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>The Library</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="Title">The Library</h1>
+        </header>
+        <div id="bookList">
+            <table>
+                <tr>
+                    <th>Serial no.</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>No. Pages</th>
+                    <th>Read Status</th>
+                    <th>Remove Book</th>
+                </tr>
+            </table>
+        </div>
+        <button onclick="togglePopup()" id="addButton" class="add-button">Add Book</button>
+    </div>
+    <div id="addForm" class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+            <div onclick="togglePopup()" class="closeButton">&times;</div>
+            <h1>Add Book</h1>
+            <form>
+                <h4>Book Name</h3>
+                <input type="text" id="bname" name="bookName" required>
+                <h4>Author</h3>
+                <input type="text" id="aname" name="authorName" required>
+                <h4>No. Pages</h3>
+                <input type="text" id="numpages" name="numberOfPages" required>
+                <h4>Read</h3>
+                <input type="checkbox" id="readStatus" name="readStatus">
+                <button onclick="addBookToLibrary()" id="addBook" class="submitButton">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="book.js"></script>
+</body>
+</html>
