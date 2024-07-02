@@ -7,6 +7,10 @@ function Book(name, author, pages, read){
     this.read = read
 }
 
+myLibrary.push(new Book("The Metamorphosis", "Franz Kafka", 80, true));
+myLibrary.push(new Book("White Nights", "Fyodor Dostoevsky", 82, true));
+myLibrary.push(new Book("The Plague", "Albert Camus", 368, false));
+
 
 function displayBooks() {
     const bookList = document.getElementById('bookList');
